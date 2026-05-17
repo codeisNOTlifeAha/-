@@ -1,6 +1,6 @@
 namespace DriftAnalysis.Tests;
 
-public class UnitTest1
+public class DriftDetectorTests
 {
     private readonly DriftDetector _detector = new();
 
