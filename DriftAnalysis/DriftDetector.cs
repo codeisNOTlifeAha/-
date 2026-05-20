@@ -44,7 +44,7 @@ public sealed class DriftDetector
             for (var i = WindowSize; i < dailyMeans.Count - WindowSize; i++)
             {
                 var previousMean = dailyMeans.Skip(i - WindowSize).Take(WindowSize).Average(d => d.MeanValue);
-                var nextMean = dailyMeans.Skip(i + 1).Take(WindowSize).Average(d => d.MeanValue);
+                var nextMean = dailyMeans.Skip(i).Take(WindowSize).Average(d => d.MeanValue);
                 var difference = Math.Abs(nextMean - previousMean);
                 var threshold = specWidth * DriftThresholdRatio;
 

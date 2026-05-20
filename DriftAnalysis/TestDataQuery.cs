@@ -22,6 +22,8 @@ public static class TestDataQuery
             AND t.test_end_time >= @StartDate 
             AND t.test_end_time < DATEADD(day, 1, @EndDate)
             AND t.production_data = 1
+            AND (CAST(@OperationName AS NVARCHAR(MAX)) = '' OR t.operation_name = @OperationName)
+            AND (CAST(@SetTemp AS NVARCHAR(MAX)) = '' OR t.set_temp = CAST(@SetTemp AS FLOAT))
         ORDER BY 
             t.test_end_time ASC;
         """;
