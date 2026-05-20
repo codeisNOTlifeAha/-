@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DriftAnalysis.Tests/DriftAnalysis.Tests.csproj" />
+  <Project Path="DriftAnalysis/DriftAnalysis.csproj" />
+</Solution>
